@@ -16,6 +16,20 @@ no mês e, em seguida, calcule e exiba quantos pontos ele obteve.
 
 programa {
   funcao inicio() {
-    
+    real horas, pontos
+
+    escreva("Insira a quantidade de horas de atividade física você teve: ")
+    leia(horas)
+
+    se (horas < 10) {
+        pontos = horas * 2
+        escreva("Você ganhou um total de: ", pontos, " pontos")
+    } senao se (horas >= 10 e horas < 20) {
+        pontos = horas * 5
+        escreva("Você ganhou um total de: ", pontos, " pontos")
+    } senao se (horas >= 20) {
+        pontos = horas * 10
+        escreva("Você ganhou um total de: ", pontos, " pontos")
+    }
   }
 }
