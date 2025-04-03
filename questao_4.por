@@ -16,6 +16,25 @@ IMC é calculado pela expressão peso/altura² (peso dividido pelo quadrado da a
 
 programa {
   funcao inicio() {
-    
+    real peso, altura, imc
+
+    escreva("Insira a altura à ser calculara: ")
+    leia(altura)
+    escreva("\nInsira o peso à ser calculado: ")
+    leia(peso)
+
+    imc = peso / (altura * altura)
+
+    se (imc  < 18.5) {
+        escreva("Abaixo do peso")
+    } senao se (imc >= 18.5 e imc <=24.9) {
+        escreva("Peso ideal")
+    } senao se (imc >= 25 e imc <=29.9) {
+        escreva("Sobrepeso")
+    } senao se (imc >= 30 e imc <=39.9) {
+        escreva("Obesidade")
+    } senao se (imc >= 40) {
+        escreva("Obesidade mórbida")
+    }
   }
 }
