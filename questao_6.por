@@ -38,6 +38,65 @@ opção "N" quando perguntado se deseja realizar outra operação.
 
 programa {
   funcao inicio() {
+    real saldo = 0.0, valor = 0.0
+    cadeia encerrar
+    inteiro opcao
     
+    faca {
+        escreva("\nEscolha uma operação:")
+        escreva("\n1 - Saque")
+        escreva("\n2 - Depósito")
+        escreva("\n3 - Sair")
+        escreva("\nOpção: ")
+        leia(opcao)
+
+        se (opcao == 1) {
+            faca{
+                escreva("\nDigite o valor a ser sacado: ")
+                leia(valor)
+
+                se(valor > 0 e valor <= saldo){
+                    saldo = saldo - valor
+                    escreva("\nSaque de R$ ", valor, " realizado.")
+                    escreva("\nSaldo atualizado: R$ ", saldo)
+                    pare
+                } senao {
+                    escreva("\nSaldo Insuficiente, tente novamente.")
+                }
+            } enquanto(verdadeiro)
+        } senao se (opcao == 2) {
+            faca {
+                escreva("\nDigite o valor à ser depositado: ")
+                leia(valor)
+
+                se (valor > 0) {
+                    saldo = saldo + valor
+                    escreva("\nDepósito de R$ ", valor, " realizado.")
+                    escreva("\nSaldo atualizado: R$ ", saldo)
+                    pare
+                } senao {
+                    escreva("\nO valor do depósito deve ser maior que zero.")
+                }
+            } enquanto (verdadeiro)
+        } senao se (opcao == 3) {
+            escreva("\nPrograma finalizado.")
+            pare
+        } senao {
+            escreva("\nOpção inválida.")
+        }
+
+        escreva("\nDeseja encerrar o programa? (S/N): ")
+        leia(encerrar)
+
+        se (encerrar == 'S' ou encerrar == 's') {
+            escreva("\nPrograma finalizado.\n")
+            pare
+        } senao se(encerrar == 'N' ou encerrar == 'n') {
+            escreva("\nPrograma continuado.\n")
+        } senao {
+            escreva("\nPrograma continuado.\n")
+        }
+    
+    } enquanto(verdadeiro)
   }
 }
