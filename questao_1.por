@@ -19,6 +19,23 @@ Saída esperada:
 
 programa {
   funcao inicio() {
-    
+    real valor_camisetas, valor_cartolinas, valor_canetas, total
+    inteiro quantidade_cartolinas, quantidade_canetas
+
+    escreva("Insira o valor das camisetas: \nR$ ")
+    leia(valor_camisetas)
+    escreva("Insira a quantidade das cartolinas: ")
+    leia(quantidade_cartolinas)
+    escreva("Insira o valor das cartolinas: \nR$ ")
+    leia(valor_cartolinas)
+    escreva("Insira a quantidade das canetas: ")
+    leia(quantidade_canetas)
+    escreva("Insira o valor das canetas: \nR$ ")
+    leia(valor_canetas)
+
+    total = valor_camisetas + (quantidade_cartolinas * valor_cartolinas) + (quantidade_canetas * valor_canetas)
+    escreva("O valor total será de R$ ", total)
+    escreva("\nO valor para cada professor será de R$ ", total / 6) /* valor total / quantidade de professores | Joana + 5 professores */
+
   }
 }
