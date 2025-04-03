@@ -16,6 +16,23 @@ seguintes informações:
 
 programa {
   funcao inicio() {
-    
+    real nota1, nota2, nota3, media
+    escreva("\nInsira a Nota 1 (peso 2) do aluno: ")
+    leia(nota1)
+    escreva("\nInsira a Nota 2 (peso 3) do aluno: ")
+    leia(nota2)
+    escreva("\nInsira a Nota 3 (peso 5) do aluno: ")
+    leia(nota3)
+
+    media = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / 10
+    escreva("\nA média ponderada do aluno é de: ", media)
+
+    se (media < 5.0) {
+        escreva("\nReprovado")
+    } senao se (media < 7.0) {
+        escreva("\nRecuperação")
+    } senao se (media >= 7.0) {
+        escreva("\nAprovado")
+    }
   }
 }
